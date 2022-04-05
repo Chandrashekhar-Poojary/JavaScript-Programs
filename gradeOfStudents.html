@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Findind Grade from the student which we take 5 subjects marks</h2>
+
+<p id="sum"> </p>
+
+<p id="grade"> </p>
+
+<script>
+// take total subjects
+const totalSub = parseInt(window.prompt("Enter Total Subject :"));
+const mark = [4];
+let grade;
+let totalSum = 0;
+// initialise marks into the array
+for (let i=0;i<totalSub;i++){
+    mark[i] = parseInt(window.prompt(`Enter ${i+1} Subject Marks :`));
+    totalSum = totalSum + mark[i];
+}
+
+// checking Grade while using total marks
+if(totalSum<=500&&totalSum>=450){
+    grade = "A";
+}else if(totalSum<450&&totalSum>=400){
+    grade = "B";
+}else if(totalSum<400&&totalSum>=350){
+    grade = "C";
+}
+else if(totalSum<350&&totalSum>=300){
+    grade = "D";
+}else if(totalSum<300&&totalSum>=200){
+    grade = "E";
+}
+else{
+    grade = "F";
+}
+
+
+document.getElementById("sum").innerHTML = "He got Score is: " + totalSum;
+document.getElementById("grade").innerHTML = "He got Grade is: " + grade;
+</script>
+
+</body>
+</html>
